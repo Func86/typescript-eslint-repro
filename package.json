@@ -1,0 +1,14 @@
+{
+  "name": "typescript-eslint-single-run-memory-repro",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prelint": "node generate.js",
+    "lint": "node --expose-gc --import ./measure-heap.js node_modules/eslint/bin/eslint.js ."
+  },
+  "devDependencies": {
+    "eslint": "10.13.0",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.72.1"
+  }
+}
